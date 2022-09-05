@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1c1c29;
+}
+
+img{
+    margin-left: 2rem;
+    width: 10%;
+}
+
+.content{
+    background: rgb(255, 255, 255);
+    color: rgb(41, 39, 39);
+    border-radius: 4px;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+    box-shadow: 2px 2px 15px rgba(221, 221, 221, 0.185);
+    border-bottom: 5px solid dodgerblue;
+    border-top: 5px solid dodgerblue;
+}
+
+.content h2{
+    font-family: 'Paytone One', sans-serif;
+    color: rgb(26, 26, 43);
+    text-align: center;
+    font-size: 28px;
+    cursor: default;
+}
+
+.container{
+    padding: 4em 3em;
+    position: absolute;
+    text-align: center;
+}
+
+.container label{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: default;
+}
+
+.container input{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 2px solid dodgerblue;
+    outline: 0;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.container button{
+    padding: 15px 20px;
+    width: 90%;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 2px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.result{
+    background: rgb(255, 255, 255);
+    color: rgb(41, 39, 39);
+    border-radius: 4px;
+    padding: 1em;
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 630px;
+    width: 500px;
+    box-shadow: 2px 2px 15px rgba(221, 221, 221, 0.185);
+    border-bottom: 5px solid dodgerblue;
+    border-top: 5px solid dodgerblue;
+}
+
+.result p{
+    text-align:start;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.result span{
+    color: dodgerblue;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+.result h1{
+    font-size: 15px;
+    margin-top: 1rem;
+    text-align:center;
+}
+
+.result b{
+    color: rgb(194, 194, 3);
+}
+
+.loss{
+    color: red;
+}
