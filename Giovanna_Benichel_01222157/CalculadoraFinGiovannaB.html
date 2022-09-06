@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Smart Ice</title>
+
+    <style>
+        .custo {
+            color: rgb(255, 0, 0);
+        }
+
+        .lucro {
+            color: rgb(0, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="questionario">
+        <h2>Seja bem vindo à Smart Ice</h2>
+        <p>
+            Qual o nome da sua empresa?
+        </p>
+        <input type="text" id="nomeEmpresa">
+        
+        <p>
+            Em média, quantos litros de sorvete são produzidos mensalmente?
+        </p>
+        <input type="number" id="litrosSorvete">
+        
+        <p>
+            Qual o custo médio de produção por litro de sorvete?
+        </p>
+        <input type="number" id="custoPorLitro">
+
+        <p>
+            Quanto é vendido o produto final?
+        </p>
+        <input type="number" id="valorFinal">
+
+        <p>
+            Qual a sua margem de perda? (De 0 a 100)
+        </p>
+        <input type="number" id="margemDePerda">
+
+        <br><br>
+        
+        <button onclick="calculate()">Calcular</button>
+    </div>
+    <div id="resultado"></div> 
+</body>
+</html>
+
+<script>
+
+    function calculate() {
+        var litrosSorveteFinal = Number(litrosSorvete.value);
+        var custoMensal = Number(litrosSorveteFinal * custoPorLitro.value).toFixed(2);
+        var lucro = Number(litrosSorveteFinal * valorFinal.value).toFixed(2);
+        var lucroFinal = lucro - custoMensal;
+        var margemDePerdaFinal = Number(margemDePerda.value);
+        var valorPerdido = Number((lucroFinal * margemDePerdaFinal) / 100).toFixed(2);
+        var lucroComPerda = lucroFinal - valorPerdido;
+
+        resultado.innerHTML = `
+            <p>
+                Olá ${nomeEmpresa.value}, em média sua empresa produz ${litrosSorveteFinal} litros de sorvete por mês.
+                <br>
+                Isso gera um custo mensal de produção de cerca de <span class="custo">R$ ${custoMensal}</span>
+                <br><br>
+                Estimamos que cerca de ${margemDePerdaFinal}% do produto pode ser perdido durante o processo de armazenamento, transporte e armazenamento do produto em varejo.
+                <br>
+                Dado esses números, estimamos que, sem a nossa solução, você possa perder cerca de <span class="custo">R$ ${valorPerdido}</span> em produtos.
+                Por conta disso, seu lucro final seria de apenas <span class="custo">R$ ${lucroComPerda}</span>
+                <br><br>
+                Já com o uso da nossa tecnologia, você poderia evitar o descarte desnecessário de seus produtos, sendo assim, seu lucro final seria de 
+                <span class="lucro">R$ ${lucroFinal}</span>
+                <br><br> 
+                E aí, bora fazer parte da Smart Ice?
+            </p>
+        `;
+    }
+</script>
