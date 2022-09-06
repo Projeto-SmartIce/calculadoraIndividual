@@ -93,10 +93,10 @@ button{
 .fntTexto2{
     font-size: 2.5vh;
     color: rgb(0, 0, 0);
-   margin-top: 1vh;
+   margin-top: 1.2vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     font-weight: 700;
 }
 
@@ -131,7 +131,13 @@ button{
     width:33.3vw;
 }
 
-.botao{
+.botao2{
+    display: flex;
+    justify-content: center;
+    margin-top: -2vh;
+}
+
+.botao1 {
     display: flex;
     justify-content: center;
 }
@@ -142,12 +148,18 @@ button{
 
 .verde{
     font-weight: 900;
-    color: rgb(2, 253, 2);
+    color: rgb(0, 126, 0);
     
 }
 
 .vermelho {
     font-weight: 900;
-    color: rgb(255, 0, 0);
+    color: rgb(146, 3, 3);
  
+}
+
+.amarelo{
+    font-weight: 900;
+    color: rgb(216, 50, 0);
+
 }
