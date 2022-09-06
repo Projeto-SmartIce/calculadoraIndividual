@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FAÇA UM RÁPIDO ORÇAMENTO!!</h1>
+
+    <b> Qual nome da sua Empresa?</b>
+    <input id='input_empresa'type='text'> <br>
+    <br>
+    <b> Quanto Produuz em média anualmente de Sorvete?
+    <input id='input_sorvete'type='number'> L <br></b>
+    <br>
+    <b> Quantas Filias possui? </b>
+    <input id='input_unidades'type='number'> <br>
+    <br>
+    <b> Quantos Representantes você possui ? </b>
+    <input id='input_representante'type='number'> <br>
+    <br>
+    <button onclick ='Calcular()'>Ver Gastos e ganhos</button>
+    <br>
+
+  
+
+
+
+   <br> <b> <h2><div id='div_resultado' style="color:rgba(2, 10, 62, 0.768);"> </div> </b> </h2>
+    <br>
+
+ <span id = 'texto1'></span>
+     <b><span id ='negrito'></span> </b>
+    <span id="texto01"></span> 
+    <b><span id ='negrito2'></span> </b>
+    <span id= 'texto2'></span> <br>
+    <b><span id ='negrito3'></span> </b>
+    <span id= 'texto3'></span> <br>
+    <b><span id ='negrito4'></span> </b>
+    <br>
+    <br>
+    <b><span id='texto4'></span>  <br></b>
+    <b><span id= 'texto5'></span> <br> </b>
+    <br>
+    <b><span id = 'texto6' ></span><br> </b>
+    <b> <span id= 'texto7' style="color:rgba(138, 7, 7, 0.768);"></span></b> <br>
+    <b><span id= 'texto8' style="color:rgba(138, 7, 7, 0.768);"></span></b><br>
+    <b><span id='texto9' style="color:rgba(138, 7, 7, 0.768);"></span></b> <br>
+    <br>
+    <b><span id= 'texto10'></span> </b>
+    <b id="textored" style="color: red;"></b>
+    <b id="textoredcomplemento10" ></b>
+    <b Id ='textored2' style="color: red;"></b> 
+    <br>
+    <br>
+    <b><h2 id = 'texto11' style="color:rgba(2, 10, 62, 0.768);"></span><br></b></h2>
+    <br>
+    
+    <b><span id= 'texto12'></span> <br> </b> 
+        <b><span id= 'texto13' style="color: GREEN ;"></span> <br> </b> 
+            <b><span id='texto14'></span>  <br> </b> 
+                <b><span id= 'texto15'></span> <br> </b> 
+                    <b><span id= 'texto16'></span> </b>
+                       <b><b id="textogreen" style="color: GREEN ;"></b> 
+    
+    
+    
+
+
+</html>
+
+
+<script>
+    function Calcular() {
+
+        var custo= (Number(input_sorvete.value)*3.12 )
+
+        var lucro = custo - (Number(input_sorvete.value) * 12,8);
+
+        var perda = lucro * 0.72;
+
+        var representante = (Number (input_sorvete.value)/ (Number(input_representante.value)))
+
+        
+
+
+div_resultado.innerHTML = ` Sem a SMART ICE `
+texto1.innerHTML = `Sua Empresa ` 
+negrito.innerHTML =`${input_empresa.value}`
+texto01.innerHTML = `Produz anualmente :`
+negrito2.innerHTML =`${input_sorvete.value}L` 
+texto2.innerHTML = `de sorvete por`
+negrito3.innerHTML =`${input_unidades.value} unidades`
+texto3.innerHTML = `esse produto foi distribuido para `
+negrito4.innerHTML = `${input_representante.value} representantes`
+texto4.innerHTML = `  Gerando R$ ${custo} de Custo de Produção`
+texto5.innerHTML = `Destribuido ${representante} Litros por Representante`
+
+
+texto6.innerHTML = `MÉDIA DE PERDA DO PRODUTO FINAL POR DESREGULAÇÃO TÉRMICA `
+
+texto7.innerHTML = `5% No periodo de armazenamento `
+texto8.innerHTML = `8% Durante transporte do produto `
+texto9.innerHTML = `15% Do produto em varejo `
+
+ texto10.innerHTML = `Você ` 
+ textored.innerHTML = ` PERDEU`
+ textoredcomplemento10.innerHTML =  `aproximadamente 28% do seu produto final, seu lucro final foi apenas de`
+ textored2.innerHTML = `R$ ${perda} `
+
+
+ texto11.innerHTML = `Com a SMART ICE`
+
+ texto12.innerHTML = `Você consegue evitar o descarte desnecessário do seu produto`
+
+ texto13.innerHTML = `ganhando até 30% mais, nas mesmas condições do seu processo atual`
+
+ texto14.innerHTML = `${custo} Custo de Produção `
+ texto15.innerHTML = `${representante} Litros por Representante `
+ texto16.innerHTML = `Seu lucro final com a tecnologia SMART ICE é de até `
+ textogreen.innerHTML = `R$ ${lucro}`
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+</script>
