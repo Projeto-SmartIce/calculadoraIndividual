@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule agora</title>
+</head>
+
+<body>
+    <h1 class="titulo">Simule agora!</h1>
+    <h2 class="subtitulo">Veja quanto você pode ganhar com nosso serviço</h2>
+
+    <div id="formulario">
+    <label for="input_nome_empresa">Nome da empresa: </label>
+    <input type="text" id="input_nome_empresa"><br>
+    <label for="qtd_total_sorvetes">Quantidade total de sorvetes (na geladeira ou em transporte): </label>
+    <input type="number" id="qtd_total"><br>
+    <label for="und_perdidas">Unidades perdidas: </label>
+    <input type="number" id="und_perdidas"><br>
+    <label for="valor_sorvete">Preço da unidade de sorvete (caixa ou picolé): </label>
+    <input type="number" id="valor_sorvete"><br>
+    <button onclick="calcular()">Calcular</button>
+    <br>
+    </div>
+    
+    <div id="exibir_resultados">
+    </div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var nome_empresa = input_nome_empresa.value
+        var quantidade = Number(qtd_total.value)
+        var unidades_perdidas = Number(und_perdidas.value)
+        var preco = Number(valor_sorvete.value)
+        var calculo1 = quantidade - unidades_perdidas
+        var calculo2 = preco * unidades_perdidas
+        var calculo3 = calculo1 * preco
+        var porcentagem_perda = ((unidades_perdidas / quantidade) * 100)
+        console.log(porcentagem_perda)
+        var estimativa_redução_perdas = (28 / 100) * unidades_perdidas
+        var estimativa_redução_monetaria = (28 / 100) * calculo2
+        
+        exibir_resultados.innerHTML = `Olá ${nome_empresa}! Estamos felizes em te receber.
+        Você teve <b>${calculo1}</b> sorvetes distribuídos em bom estado, perdendo no processo <b>${unidades_perdidas}</b> unidades.<br>
+        O prejuízo financeiro foi de <b>R$${calculo2}</b>.<br>
+        Essa perda equivale à <b>${porcentagem_perda}%</b> dos sorvetes produzidos.<br>
+        Com o nosso serviço estimamos uma redução de <b>28%</b> das unidades perdidas,
+        que seria de <b>${estimativa_redução_perdas}</b> unidades de sorvete e <b><u>uma receita de </u></b><b>R$${estimativa_redução_monetaria}</b>. `
+    }
+</script>
